@@ -47,6 +47,27 @@
             top = newest;
             size++;
         }
+        public int Pop()
+        {
+            if (isEmpty())
+            {
+                Console.WriteLine("List is empty");
+                return -1;
+            }
+            Node runner = head;
+            int i = 1;
+            while (i < size - 1)
+            {
+                runner = runner.next;
+                i++;
+            }
+            top = runner;
+            runner = runner.next;
+            int e = runner.element;
+            top.next = null;
+            size--;
+            return e;
+        }
         public void display()
         {
             Node runner = head;
@@ -71,6 +92,11 @@
             stack.push(30);
             stack.push(70);
             stack.display();
+            stack.Pop();
+            stack.display();
+            stack.Pop();
+            stack.display();
+
 
         }
     }
