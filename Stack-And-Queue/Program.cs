@@ -11,13 +11,13 @@
             this.next = n;
         }
     }
-    internal class Queue
+    internal class Stack
     {
         public Node head;
         public Node top;
         public int size;
 
-        public Queue()
+        public Stack()
         {
             head = null;
             top = null;
@@ -66,11 +66,11 @@
         static void Main(string[] args)
         {
             Console.WriteLine("-----------------------QUEUE-------------------");
-            Queue queue = new Queue();
-            queue.push(56);
-            queue.push(30);
-            queue.push(70);
-            queue.display();
+            Stack stack = new Stack();
+            stack.push(56);
+            stack.push(30);
+            stack.push(70);
+            stack.display();
 
         }
     }
